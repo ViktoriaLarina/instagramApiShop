@@ -1,0 +1,54 @@
+.alert {
+  margin: 20px;
+}
+
+.card {
+  cursor: pointer;
+  margin-top: 15px;
+
+  .link-style {
+    color: blue;
+    cursor: pointer;
+    text-decoration: solid;
+  }
+
+  .card-body {
+    height: 100px;
+  }
+}
+
+.txt-wrapp {
+  height: calc(100% - 100px);
+  width: 100%;
+  position: absolute;
+}
+
+.txt-wrapp:hover .hover-style, .txt-wrapp:hover .content-txt-wrapper {
+  display: block;
+}
+
+.hover-style {
+  display: none;
+  background: #000;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.content-txt-wrapper {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 200px;
+  height: 20px;
+}
+
+.content-txt {
+  color: #fff;
+}
+

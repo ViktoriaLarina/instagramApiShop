@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row" *ngIf="images.length !== 0">
+    <div class="col-md-4" *ngFor="let image of images">
+      <div class="card">
+        <div class="txt-wrapp">
+        <div class="hover-style"></div>
+        <div class="content-txt-wrapper">
+          <div class="content-txt">
+            <span class="created-time">{{image.created_time | date:'fullDate' }}</span>
+          </div>
+        </div>
+        </div>
+        <img class="card-img-top" src="{{image.images.standard_resolution.url}}">
+
+        <div class="card-body">
+          <h5 class="card-title">likes: {{image.likes.count}}</h5>
+          <a class="card-text link-style" (click)="openLink(image.link)">{{image.link}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-info" role="alert" *ngIf="images.length === 0 && isResponse">
+    <strong>Sorry!</strong> Empty list
+  </div>
+</div>
